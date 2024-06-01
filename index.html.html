@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html id="html">
+    <head>
+        <link rel="stylesheet" href="./stylecode.css">
+        <script>
+            function f1(){
+    const gra = ["g1", "g2", "g3", "g4", "g5", "g6", "g7", "g8", "g9", "g10"];
+    const ids = ["cr1", "cr2", "cr3", "cr4", "cr5", "cr6", "cr7", "cr8", "cr9", "cr10"];
+    let points = Array(...gra);
+    for(let j = 0; j < gra.length; j++){
+        var inputgrade = document.getElementById(gra[j]).value;
+        switch(inputgrade){
+            case('S'):
+            points[j] = "10";
+            break;
+            case('A'):
+            points[j] = "9";
+            break;
+            case('B'):
+            points[j] = "8";
+            break;
+            case('C'):
+            points[j] = "7";
+            break;
+            case('D'):
+            points[j] = "6";
+            break;
+            case('E'):
+            points[j] = "5";
+            break;
+            case('F'):
+            points[j] = "0";
+            break;
+            case('Select Grade'):
+            points[j] = "0";
+            break;
+        }
+    }
+    let sum = 0;
+    let grade = 0;
+    for (let i = 0; i < ids.length; i++) {
+      const inputElement = document.getElementById(ids[i]).value;
+      let value;
+      if (inputElement === '') {
+        value = 0;
+      }
+      else{
+        value = parseInt(inputElement, 10);
+      }
+      sum += value;
+      grade+=eval(value+'*'+points[i]);
+    }
+    let round = eval(grade+'/'+sum);
+    document.getElementById("cred").innerHTML = sum;
+    document.getElementById("gpa").innerHTML = round.toFixed(2);
+}
+        </script>
+    </head>      
+    <body>
+        <header align="center" style="font-size: 30px" id="header">
+            <h2 id="heading">GPA Calculator</h2>
+        </header><br>
+        <div>
+            <form id="form" align="center">
+                <div class="c1">COURSE 1 : 
+                    <input type="text" placeholder="Credits" id="cr1" default="0" class="credbutton">
+                    <select id="g1" class="gradbutton">
+                        <option>Select Grade</option>
+                        <option>S</option>
+                        <option>A</option>
+                        <option>B</option>
+                        <option>C</option>
+                        <option>D</option>
+                        <option>E</option>
+                        <option>F</option>
+                    </select>
+                </div><br>
+                <div class="c1">COURSE 2 : 
+                    <input type="text" placeholder="Credits" id="cr2" default="0" class="credbutton">
+                    <select id="g2" class="gradbutton">
+                        <option>Select Grade</option>
+                        <option>S</option>
+                        <option>A</option>
+                        <option>B</option>
+                        <option>C</option>
+                        <option>D</option>
+                        <option>E</option>
+                        <option>F</option>
+                    </select>
+                </div><br>
+                <div class="c1">COURSE 3 : 
+                    <input type="text" placeholder="Credits" id="cr3" default="0" class="credbutton">
+                    <select id="g3" class="gradbutton">
+                        <option>Select Grade</option>
+                        <option>S</option>
+                        <option>A</option>
+                        <option>B</option>
+                        <option>C</option>
+                        <option>D</option>
+                        <option>E</option>
+                        <option>F</option>
+                    </select>
+                </div><br>
+                <div class="c1">COURSE 4 : 
+                    <input type="text" placeholder="Credits" id="cr4" default="0" class="credbutton">
+                    <select id="g4" class="gradbutton">
+                        <option>Select Grade</option>
+                        <option>S</option>
+                        <option>A</option>
+                        <option>B</option>
+                        <option>C</option>
+                        <option>D</option>
+                        <option>E</option>
+                        <option>F</option>
+                    </select>
+                </div><br>
+                <div class="c1">COURSE 5 : 
+                    <input type="text" placeholder="Credits" id="cr5" default="0" class="credbutton">
+                    <select id="g5" class="gradbutton">
+                        <option>Select Grade</option>
+                        <option>S</option>
+                        <option>A</option>
+                        <option>B</option>
+                        <option>C</option>
+                        <option>D</option>
+                        <option>E</option>
+                        <option>F</option>
+                    </select>
+                </div><br>
+                <div class="c1">COURSE 6 : 
+                    <input type="text" placeholder="Credits" id="cr6" default="0" class="credbutton">
+                    <select id="g6" class="gradbutton">
+                        <option>Select Grade</option>
+                        <option>S</option>
+                        <option>A</option>
+                        <option>B</option>
+                        <option>C</option>
+                        <option>D</option>
+                        <option>E</option>
+                        <option>F</option>
+                    </select>
+                </div><br>
+                <div class="c1">COURSE 7 : 
+                    <input type="text" placeholder="Credits" id="cr7" default="0" class="credbutton">
+                    <select id="g7" class="gradbutton">
+                        <option>Select Grade</option>
+                        <option>S</option>
+                        <option>A</option>
+                        <option>B</option>
+                        <option>C</option>
+                        <option>D</option>
+                        <option>E</option>
+                        <option>F</option>
+                    </select>
+                </div><br>
+                <div class="c1">COURSE 8 : 
+                    <input type="text" placeholder="Credits" id="cr8" default="0" class="credbutton">
+                    <select id="g8" class="gradbutton">
+                        <option>Select Grade</option>
+                        <option>S</option>
+                        <option>A</option>
+                        <option>B</option>
+                        <option>C</option>
+                        <option>D</option>
+                        <option>E</option>
+                        <option>F</option>
+                    </select>
+                </div><br>
+                <div class="c1">COURSE 9 : 
+                    <input type="text" placeholder="Credits" id="cr9" default="0" class="credbutton">
+                    <select id="g9" class="gradbutton">
+                        <option>Select Grade</option>
+                        <option>S</option>
+                        <option>A</option>
+                        <option>B</option>
+                        <option>C</option>
+                        <option>D</option>
+                        <option>E</option>
+                        <option>F</option>
+                    </select>
+                </div><br>
+                <div class="c1">COURSE10 : 
+                    <input type="text" placeholder="Credits" id="cr10" default="0" class="credbutton">
+                    <select id="g10" class="gradbutton">
+                        <option>Select Grade</option>
+                        <option>S</option>
+                        <option>A</option>
+                        <option>B</option>
+                        <option>C</option>
+                        <option>D</option>
+                        <option>E</option>
+                        <option>F</option>
+                    </select>
+                </div><br/><br/>
+                <input type="button" onclick="f1()" value="Calculate GPA" id="button"><hr >
+                <table width="400" height="90" border ="2" cellspacing="5" cellpadding="5" align="center" id="table">
+                    <tr>
+                        <td width="300" class="tableA">Total No. of Credits</td>
+                        <td id="cred" align="center" width="100" class="tableB"></td>
+                    </tr>
+                    <tr>
+                        <td width="300" class="tableA">GPA</td>
+                        <td id="gpa" align="center" width="100" class="tableB"></td>
+                    </tr>
+                </table><hr>
+            </form>
+        </div>
+        <footer align="center" style="font-size: 20px" id="footer">By - Vijay Neeli</footer>
+    </body>
+</html>
