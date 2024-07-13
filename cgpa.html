@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./cgpa.css">
+        <script>
+            function f1(){
+            const gpa = ["gpa1", "gpa2", "gpa3", "gpa4", "gpa5", "gpa6", "gpa7", "gpa8"];
+            const ids = ["cr1", "cr2", "cr3", "cr4", "cr5", "cr6", "cr7", "cr8"];
+            let Cred = 0;
+            let gpa1 = 0;
+
+            for (let i = 0; i < ids.length; i++) {
+                const creditElement = document.getElementById(ids[i]).value;
+                const gpaElement = document.getElementById(gpa[i]).value;
+
+                let credits = parseFloat(creditElement) || 0;
+                let gradePoints = parseFloat(gpaElement) || 0;
+
+                Cred += credits;
+                gpa1 += credits * gradePoints;
+            }
+
+            let cgpa = Cred ? (gpa1 / Cred) : 0;
+
+            document.getElementById("cred").innerHTML = Cred;
+            document.getElementById("gpa").innerHTML = cgpa.toFixed(2);
+        }
+        </script>
+    </head>
+    <body>
+        <header align="center" style="font-size: 30px" id="header">
+            <h2 id="heading">CGPA Calculator</h2>
+        </header><br>
+        <div id="container">
+            <form>
+                <div class="c1">SEM 1 : 
+                    <input type="text" placeholder="GPA" id="gpa1" default="0" class="GPAinp">
+                    <input type="text" placeholder="Credits" id="cr1" default="0" class="credinp">
+                </div><br>
+                <div class="c1">SEM 2 : 
+                    <input type="text" placeholder="GPA" id="gpa2" default="0" class="GPAinp">
+                    <input type="text" placeholder="Credits" id="cr2" default="0" class="credinp">
+                </div><br>
+                <div class="c1">SEM 3 : 
+                    <input type="text" placeholder="GPA" id="gpa3" default="0" class="GPAinp">
+                    <input type="text" placeholder="Credits" id="cr3" default="0" class="credinp">
+                </div><br>
+                <div class="c1">SEM 4 : 
+                    <input type="text" placeholder="GPA" id="gpa4" default="0" class="GPAinp">
+                    <input type="text" placeholder="Credits" id="cr4" default="0" class="credinp">
+                </div><br>
+                <div class="c1">SEM 5 : 
+                    <input type="text" placeholder="GPA" id="gpa5" default="0" class="GPAinp">
+                    <input type="text" placeholder="Credits" id="cr5" default="0" class="credinp">
+                </div><br>
+                <div class="c1">SEM 6 : 
+                    <input type="text" placeholder="GPA" id="gpa6" default="0" class="GPAinp">
+                    <input type="text" placeholder="Credits" id="cr6" default="0" class="credinp">
+                </div><br>
+                <div class="c1">SEM 7 : 
+                    <input type="text" placeholder="GPA" id="gpa7" default="0" class="GPAinp">
+                    <input type="text" placeholder="Credits" id="cr7" default="0" class="credinp">
+                </div><br>
+                <div class="c1">SEM 8 : 
+                    <input type="text" placeholder="GPA" id="gpa8" default="0" class="GPAinp">
+                    <input type="text" placeholder="Credits" id="cr8" default="0" class="credinp">
+                </div><br>
+                <input type="button" onclick="f1()" value="Calculate CGPA" id="button"><hr >
+                <table width="400" height="90" border ="2" cellspacing="5" cellpadding="5" align="center" id="table">
+                    <tr>
+                        <td width="300" class="tableA">Total Credits completed</td>
+                        <td id="cred" align="center" width="100"></td>
+                    </tr>
+                    <tr>
+                        <td width="300" class="tableA">CGPA</td>
+                        <td id="gpa" align="center" width="100"></td>
+                    </tr>
+                </table>
+            </form>
+        </div><br>
+        <footer align="center" style="font-size: 20px; margin-left: 50px" id="footer">By - Vijay Neeli.<br>© 2024  All rights reserved.</footer>
+    </body>
+</html>
