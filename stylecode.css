@@ -82,8 +82,6 @@ html, body {
     text-align: center;
 }
 
-/* Media Queries for Responsiveness */
-
 @media (max-width: 1200px) {
     #container {
         width: 60%;
@@ -95,6 +93,7 @@ html, body {
 @media (max-width: 768px) {
     #container {
         width: 80%;
+        height:150%;
         margin-left: auto;
         margin-right: auto;
     }
