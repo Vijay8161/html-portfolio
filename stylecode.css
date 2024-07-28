@@ -1,139 +1,67 @@
-html {
-    background-color: #F5DADF;
-    height: 165vh;
-    width: 100vw;
-    background-image: linear-gradient(40deg, #9BCDAF 30%, transparent 50%), linear-gradient(-60deg, #FFCCCC 20%, transparent 40%);
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
 #container {
-    width: 40%;
-    height: 90%;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    margin: 0 auto;
-    border: 3px solid black;
-    border-radius: 30px;
-    padding-top: 50px;
-    background-color: papayawhip;
-    box-sizing: border-box;
+    justify-content: center;
+    height: 100%;
 }
 
-#heading {
-    text-align: center;
-    font-size: 2rem;
-    margin-top: 0;
-}
-
-.credbutton, .gradbutton {
-    display: inline-block;
-    width: 90px;
-    height: 40px;
-    border: 3px solid black;
-    border-radius: 10px;
-    padding: 1px;
-    margin: 10px;
-    background-color: #D6CC99;
-    color: #3D0C11;
-    font-weight: bold;
-    font-size: 18px;
-    text-align: center;
-    line-height: 40px;
-    box-sizing: border-box;
-}
-
-.gradbutton {
-    width: 106px;
-    background-color: #BACD92;
+#form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .c1 {
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-    font-size: larger;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 400px;
+    margin-bottom: 15px;
 }
 
-#button {
-    border-radius: 60px;
-    width: 100px;
-    height: 40px;
-    background-color: #001524;
-    color: antiquewhite;
-    font-weight: bold;
-    font-size: 13px;
-    text-align: center;
-    line-height: 40px;
-    margin: 20px auto;
-    display: block;
-    box-sizing: border-box;
+.c1 select {
+    margin-left: 10px;
 }
 
-#table {
-    background-color: #004225;
+#calculate {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
     color: white;
-    font-weight: bold;
-    font-size: 18px;
-    text-align: center;
-    width: 90%;
-    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-#footer {
-    color: #263A29;
-    font-weight: bolder;
-    font-size: 20px;
-    text-align: center;
-    margin: 20px 0;
+#calculate:hover {
+    background-color: #45a049;
 }
 
-@media (max-width: 1024px) {
-    #container {
-        width: 50%;
-        margin-top: 50px;
-    }
-    #heading {
-        font-size: 1.8rem;
-    }
-    .credbutton, .gradbutton {
-        font-size: 16px;
-        height: 36px;
-        line-height: 36px;
-    }
-    #footer {
-        font-size: 18px;
-    }
+#results {
+    margin-top: 20px;
 }
 
-@media (max-width: 768px) {
-    #container {
-        width: 70%;
-        margin-top: 40px;
-    }
-    #heading {
-        font-size: 1.6rem;
-    }
-    .credbutton, .gradbutton {
-        font-size: 16px;
-        height: 36px;
-        line-height: 36px;
-    }
-    #footer {
-        font-size: 16px;
-    }
+#results label {
+    display: block;
+    margin-bottom: 5px;
 }
 
-@media (max-width: 480px) {
-    #container {
+@media (max-width: 600px) {
+    .c1 {
         width: 90%;
-        margin-top: 30px;
     }
-    #heading {
-        font-size: 1.4rem;
-    }
-    .credbutton, .gradbutton {
-        font-size: 14px;
-        height: 32px;
-        line-height: 32px;
-    }
-    #footer {
+
+    #calculate {
+        width: 90%;
         font-size: 14px;
     }
 }
