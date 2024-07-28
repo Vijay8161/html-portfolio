@@ -1,11 +1,15 @@
-html{
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
     background-color: #F5DADF;
     height: 165vh;
     width: 100vw;
     background-image: linear-gradient(40deg, #9BCDAF 30%, transparent 50%), linear-gradient(-60deg, #FFCCCC 20%, transparent 40%);
 }
-#container{
-    width : 40%;
+
+#container {
+    width: 40%;
     height: 90%;
     align-items: center;
     margin-left: 500px;
@@ -14,60 +18,122 @@ html{
     padding-top: 50px;
     background-color: papayawhip;
 }
-#heading{
+
+#heading {
     margin-left: 100px;
 }
-.credbutton{
-    width : 90px;
-    height : 40px;
-    border :3px solid black; 
-    border-radius : 10px;
+
+.credbutton {
+    width: 90px;
+    height: 40px;
+    border: 3px solid black; 
+    border-radius: 10px;
     padding: 1px;
     margin-right: 40px;
     background-color: #D6CC99;
-    color : #3D0C11;
+    color: #3D0C11;
     font-weight: bold;
     font-size: 18px;
     text-align: center;
 }
-.gradbutton{
-    width : 106px;
-    height : 40px;
-    border : 3px solid black;
+
+.gradbutton {
+    width: 106px;
+    height: 40px;
+    border: 3px solid black;
     border-radius: 10px;
-    padding : 1px;
+    padding: 1px;
     background-color: #BACD92;
-    color : #3D0C11;
+    color: #3D0C11;
     font-weight: bold;
     font-size: 18px;
     text-align: center;
 }
-.c1{
+
+.c1 {
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
-    font-size : larger;
+    font-size: larger;
 }
-#button{
-    border-radius : 60px;
-    width : 100px;
-    height : 40px;
-    background-color : #001524;
-    color : antiquewhite;
+
+#button {
+    border-radius: 60px;
+    width: 100px;
+    height: 40px;
+    background-color: #001524;
+    color: antiquewhite;
     font-weight: bold;
     font-size: 13px;
     text-align: center;
 }
-#table{
+
+#table {
     background-color: #004225;
-    color : white;
+    color: white;
     font-weight: bold;
     font-size: 18px;
     text-align: center;
 }
-#footer{
-    color : #263A29 ;
+
+#footer {
+    color: #263A29;
     font-weight: bolder;
     font-size: 20px;
     text-align: center;
+}
 
+/* Media Queries for Responsiveness */
+
+@media (max-width: 1200px) {
+    #container {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    #container {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .credbutton, .gradbutton {
+        width: 70px;
+        font-size: 16px;
+    }
+    .c1 {
+        font-size: medium;
+    }
+    #heading {
+        margin-left: 50px;
+    }
+    #button {
+        width: 90px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    #container {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 20px;
+    }
+    .credbutton, .gradbutton {
+        width: 60px;
+        font-size: 14px;
+    }
+    .c1 {
+        font-size: small;
+    }
+    #heading {
+        margin-left: 0;
+        text-align: center;
+    }
+    #button {
+        width: 80px;
+        font-size: 10px;
+    }
 }
