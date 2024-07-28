@@ -72,5 +72,64 @@ html{
     font-weight: bolder;
     font-size: 20px;
     text-align: center;
+}
 
+/* Media Queries for Responsiveness */
+
+@media (max-width: 1200px) {
+    #container {
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    #container {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .GPAinp, .credinp {
+        width: 70px;
+        font-size: 16px;
+    }
+    .c1 {
+        font-size: medium;
+        margin-left: 20px;
+    }
+    #heading {
+        margin-left: 50px;
+    }
+    #button {
+        width: 100px;
+        font-size: 12px;
+        margin-left: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    #container {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 20px;
+    }
+    .GPAinp, .credinp {
+        width: 60px;
+        font-size: 14px;
+    }
+    .c1 {
+        font-size: small;
+        margin-left: 10px;
+    }
+    #heading {
+        margin-left: 0;
+        text-align: center;
+    }
+    #button {
+        width: 90px;
+        font-size: 10px;
+        margin-left: 120px;
+    }
 }
